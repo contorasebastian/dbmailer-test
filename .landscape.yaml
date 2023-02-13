@@ -1,0 +1,13 @@
+doc-warnings: no
+test-warnings: no
+strictness: high
+max-line-length: 79
+uses:
+    - django
+autodetect: yes
+ignore-paths:
+    - dbmail/migrations
+    - dbmail/management
+    - demo
+
+
