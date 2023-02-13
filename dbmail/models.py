@@ -594,7 +594,7 @@ class SignalDeferredDispatch(models.Model):
     kwargs = models.TextField()
     params = models.TextField()
     eta = models.DateTimeField(db_index=True)
-    done = models.NullBooleanField(default=None)
+    done = models.BooleanField(null=True, default=None)
     created = models.DateTimeField(auto_now_add=True)
 
     def run_task(self):
