@@ -11,7 +11,7 @@ try:
 except ImportError:
     from django.urls import reverse
 
-from django.conf.urls import re_path
+from django.urls import re_path
 from django.contrib import messages
 from django.contrib import admin
 

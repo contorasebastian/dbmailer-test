@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-from django.conf.urls import re_path
+from django.urls import re_path
 
 from dbmail.views import (
     send_by_dbmail, mail_read_tracker,
