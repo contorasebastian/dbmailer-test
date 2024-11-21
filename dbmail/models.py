@@ -617,7 +617,9 @@ class SignalDeferredDispatch(models.Model):
         )
 
     class Meta:
-        index_together = (('eta', 'done'),)
+        indexes = [
+            models.Index(fields=['eta', 'done']),
+        ]
 
 
 @python_2_unicode_compatible
