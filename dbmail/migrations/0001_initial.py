@@ -292,13 +292,9 @@ class Migration(migrations.Migration):
             },
             bases=(models.Model,),
         ),
-        migrations.AlterIndexTogether(
-            name='signaldeferreddispatch',
-            options={
-                'indexes': [
-                    models.Index(fields=['eta', 'done']),
-                ],
-            },
+        migrations.AddIndex(
+            model_name='signaldeferreddispatch',
+            index=models.Index(fields=['eta', 'done'], name='dbmail_signaldeferreddispatch_eta_done_ccbe4c01_idx'),
         ),
         migrations.AddField(
             model_name='maillog',
